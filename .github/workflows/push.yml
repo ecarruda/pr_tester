@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DEVELOPER_DIR: /Applications/Xcode_${{env.XCODE_VERSION}}.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_${{XCODE_VERSION}}.app/Contents/Developer
 
     steps:
       - run: echo $NODE_VERSION
