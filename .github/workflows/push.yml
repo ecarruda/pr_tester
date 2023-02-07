@@ -22,3 +22,4 @@ jobs:
           echo ${{ env.DEVELOPER_DIR }}
           echo $XCODE_VERSION
           echo $DEVELOPER_DIR
+          echo $NODE_VERSION
