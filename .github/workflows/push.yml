@@ -29,4 +29,4 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: $NODE2_VERSION
+          node-version: ${{ env.NODE2_VERSION }}
