@@ -13,7 +13,10 @@ jobs:
   update_draft_release:
     runs-on: ubuntu-latest
 
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_${{ XCODE_VERSION }}.app/Contents/Developer
+
     steps:
       - run: echo ${{ env.NODE_VERSION }}
       - run: echo ${{ env.XCODE_VERSION }}
-
+      - run: echo ${{ env.DEVELOPER_DIR }}
