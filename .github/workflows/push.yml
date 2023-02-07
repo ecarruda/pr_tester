@@ -15,6 +15,8 @@ jobs:
     env:
       XCODE_VERSION: 14.2
       DEVELOPER_DIR: /Applications/Xcode_14.2.app/Contents/Developer
+      NODE2_VERSION: 18
+
     steps:
       - run: |
           echo ${{ env.NODE_VERSION }}
@@ -27,4 +29,4 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: $NODE2_VERSION
