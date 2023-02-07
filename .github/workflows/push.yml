@@ -7,16 +7,18 @@ on:
 
 env:
   NODE_VERSION: 16
-  XCODE_VERSION: 14.2
 
 jobs:
   update_draft_release:
     runs-on: ubuntu-latest
 
     env:
-      DEVELOPER_DIR: /Applications/Xcode_${{ XCODE_VERSION }}.app/Contents/Developer
-
+      XCODE_VERSION: 14.2
+      DEVELOPER_DIR: /Applications/Xcode_14.2.app/Contents/Developer
     steps:
-      - run: echo ${{ env.NODE_VERSION }}
-      - run: echo ${{ env.XCODE_VERSION }}
-      - run: echo ${{ env.DEVELOPER_DIR }}
+      - run: |
+          echo ${{ env.NODE_VERSION }}
+          echo ${{ env.XCODE_VERSION }}
+          echo ${{ env.DEVELOPER_DIR }}
+          echo $XCODE_VERSION
+          echo $DEVELOPER_DIR
