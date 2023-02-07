@@ -23,3 +23,8 @@ jobs:
           echo $XCODE_VERSION
           echo $DEVELOPER_DIR
           echo $NODE_VERSION
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: $NODE_VERSION
